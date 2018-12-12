@@ -1,0 +1,35 @@
+<idea-plugin>
+  <id>org.kai.protogen</id>
+  <name>ProtoGen</name>
+  <vendor email="kai_liu@outlook.com">Kai</vendor>
+
+  <description>
+    This plugin provides a one click button to generate classes from protobuf file. Output root
+    directory, proto include directory and language can be configured. It also memorize the last
+    configuration to a proto file or to the project so it provides users a convenient experience.
+  </description>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationService serviceImplementation="org.kai.protogen.config.PluginConfiguration"/>
+    <projectService serviceImplementation="org.kai.protogen.compile.BuildProtoService"/>
+  </extensions>
+
+  <actions>
+    <group id="org.kai.protogen.compile.BuildProtoActionGroup"
+      class="org.kai.protogen.compile.BuildProtoActionGroup"
+      text="BuildProtoGroup" description="Compiling proto file into class">
+      <add-to-group group-id="NavBarToolBar" anchor="first"/>
+      <action class="org.kai.protogen.compile.BuildProtoAction"
+        id="org.kai.protogen.compile.BuildProtoAction"
+        icon="/icons/build.png"
+        text="Build Proto" description="Compiling proto file into class"/>
+    </group>
+  </actions>
+
+</idea-plugin>
