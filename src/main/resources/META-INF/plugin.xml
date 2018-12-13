@@ -4,9 +4,8 @@
   <vendor email="kai_liu@outlook.com">Kai</vendor>
 
   <description>
-    This plugin provides a one click button to generate classes from protobuf file. Output root
-    directory, proto include directory and language can be configured. It also memorize the last
-    configuration to a proto file or to the project so it provides users a convenient experience.
+    This is a plugin to add a build button to proto file in intellij that generates
+    the proto class automatically.
   </description>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
