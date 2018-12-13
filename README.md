@@ -1,6 +1,7 @@
 # ProtoGen
 
-This is a plugin to add a build button to proto file in intellij.
+This is a plugin to add a build button to proto file in intellij that generates 
+the proto class automatically.
 
 Click the colorful "B" to show the build proto dialog:
 
